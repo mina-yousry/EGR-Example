@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewController5.swift
 //  EGR Example
 //
 //  Created by Mina Yousry on 14/09/2025.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController5: UIViewController {
 
+    var router: AppRouter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        self.title = "ViewController 5"
     }
-
-
 }
-

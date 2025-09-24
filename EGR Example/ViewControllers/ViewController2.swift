@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController2: UIViewController {
 
-    var router: AppRouter?
+    var router: VC2Router?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +18,10 @@ class ViewController2: UIViewController {
     }
     
     @IBAction func gotoVC4(_ sender: Any) {
-        router?.goToViewController4(viewController: self)
+        router?.goToViewController4()
     }
     
     @IBAction func gotoVC5(_ sender: Any) {
-        router?.goToViewController5(viewController: self)
+        router?.goToViewController5()
     }
 }

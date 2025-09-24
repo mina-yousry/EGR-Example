@@ -10,10 +10,11 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var mainRouter: AppRouter?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let router = AppRouter()
-        self.window = router.startViewController1(scene: scene)
+        mainRouter = AppRouter()
+        self.window = mainRouter?.startApp(scene: scene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}

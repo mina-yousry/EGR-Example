@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController5: UIViewController {
 
-    var router: VC5Router?
+    var router: (any VC5RouterProtocol)?
     
     override func viewDidLoad() {
         super.viewDidLoad()

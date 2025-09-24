@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController4: UIViewController {
 
-    var router: VC4Router?
+    var router: (any VC4RouterProtocol)?
     
     override func viewDidLoad() {
         super.viewDidLoad()

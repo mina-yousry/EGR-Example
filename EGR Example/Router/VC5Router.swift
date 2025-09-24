@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-class VC5Router {
+protocol VC5RouterProtocol: VCBaseRouterProtocol where Routes == VC5Routes {}
+
+class VC5Router: VC5RouterProtocol {
     
     var currentVC: UIViewController?
     
@@ -19,3 +21,5 @@ class VC5Router {
         vc.navigationController?.pushViewController(vc5, animated: true)
     }
 }
+
+enum VC5Routes {}

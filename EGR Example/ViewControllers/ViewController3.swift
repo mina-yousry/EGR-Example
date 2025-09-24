@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController3: UIViewController {
 
-    var router: VC3Router?
+    var router: (any VC3RouterProtocol)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,6 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func gotoVC6(_ sender: Any) {
-        router?.goToViewController6()
+        router?.navigate(to: .vc6)
     }
 }

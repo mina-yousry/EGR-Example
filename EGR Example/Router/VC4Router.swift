@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-class VC4Router {
+protocol VC4RouterProtocol: VCBaseRouterProtocol where Routes == VC4Routes {}
+
+class VC4Router: VC4RouterProtocol {
     
     var currentVC: UIViewController?
     
@@ -19,3 +21,5 @@ class VC4Router {
         vc.navigationController?.pushViewController(vc4, animated: true)
     }
 }
+
+enum VC4Routes {}

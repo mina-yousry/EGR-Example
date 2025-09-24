@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-class VC1Router {
+protocol VC1RouterProtocol: AppRouterProtocol where Routes == VC1Routes {}
+
+class VC1Router: VC1RouterProtocol {
     
     var currentVC: UIViewController?
     
@@ -24,15 +26,29 @@ class VC1Router {
         return window
     }
     
-    func goToViewController2() {
+    func navigate(to route: VC1Routes) {
+        switch route {
+        case .vc2:
+            goToViewController2()
+        case .vc3:
+            goToViewController3()
+        }
+    }
+    
+    private func goToViewController2() {
         let vc2Router = VC2Router()
         guard let vc = currentVC else { return }
         vc2Router.start(vc: vc)
     }
     
-    func goToViewController3() {
+    private func goToViewController3() {
         let vc3Router = VC3Router()
         guard let vc = currentVC else { return }
         vc3Router.start(vc: vc)
     }
+}
+
+enum VC1Routes {
+    case vc2
+    case vc3
 }
